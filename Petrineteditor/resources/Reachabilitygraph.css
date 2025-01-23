@@ -1,0 +1,94 @@
+/*	Dies ist die css-Datei, in der das Layout des Erreichbarkeitsgraphen beschrieben ist. */
+
+/*----- Kantenstyling -----*/
+
+	/*	Style-Angabe fuer eine Kante */
+	edge {
+		fill-color: black;
+		arrow-shape: arrow;
+		arrow-size: 9px, 6px;
+	}
+
+		/*	Zusätzliches Kantenattribut "highlight" für eine Kante welche einer geschalteten Transition entspricht. */
+		edge.highlight {
+			fill-color: #559E55;
+		}
+		
+		/*	Zusätzliches Kantenattribut "unboundedCause" für eine Kante, welche Teil des Pfades eines unbeschränkten Graphen ist. */
+		edge.unboundedCause{
+			
+			shadow-mode: plain;
+			shadow-width: 8px;
+			shadow-offset: 0px;
+			shadow-color: #EFBE7D;
+		}
+	
+	/*	Style-Angabe fuer ein Sprite, dass als Label für eine Kante benutzt wird */
+	sprite.edgeLabel {
+		fill-mode: none;
+		text-size: 14;
+		text-color: black;
+		text-alignment: center;
+		text-offset: 0,-15;
+	}
+
+/*----- Knotenstlying -----*/
+
+		/* Style-Angabe fuer einen Knoten */
+	node {
+		/* Properties */	
+		size:40px;
+		fill-color: LightBlue;
+		shape: rounded-box;
+		
+		/* Textproperties */
+		text-color: black;
+		text-size: 14;
+		text-alignment: under;
+		text-background-mode: plain;
+		text-offset: 0px, 5px;
+	
+		/* Border */
+		stroke-mode: plain;
+		stroke-color: black;
+		stroke-width: 1px;
+	}
+	
+		/*	Zusätzliches Knotenattribut "highlight" für einen Knoten der der Zielmarkierung eines Schaltvorganges entspricht. */
+		node.highlight {
+			text-style: bold;		
+			stroke-color: #559E55;
+			stroke-width: 3px;
+		}
+		
+		/*	Zusätzliches Knotenattribut "initial" für den ersten Knoten eines Erreichbarkeitsgraphen. */
+		node.initial {
+			fill-color: lightgray;
+			stroke-color: DimGray;
+			stroke-width: 4px;
+		}
+		
+		/*	Zusätzliches Knotenattribut "unboundedCause" für einen Knoten, welche Teil des Pfades eines unbeschränkten Graphen ist. */	
+		node.unboundedCause {
+			shadow-mode: plain;
+			shadow-width: 8px;
+			shadow-offset: 0px;
+			shadow-color: #EFBE7D;
+		}
+		
+		/* Zusätzliches Knotenattribut "unboundedCauseSourcemarking" zur Markierung des Knotens m */
+		node.unboundedCauseSourcemarking {
+		fill-color: #E9EC6B;
+		}
+		
+		/* Zusätzliches Knotenattribut "unboundedCauseTargetmarking" zur Markierung des Knotens m' */
+		node.unboundedCauseTargetmarking {
+			fill-color: #FF6D6A;
+		}
+	
+	/* Style-Angaben für ein SPrite, welches noch aktive, bisher noch nicht geschaltete Transitionen hat. */	
+	sprite.remainingTransitions	{
+		size: 10px;
+		shape: box;
+		fill-color: #559E55;
+	}

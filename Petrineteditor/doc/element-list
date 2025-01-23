@@ -1,0 +1,15 @@
+de.pohl.petrinets
+de.pohl.petrinets.control
+de.pohl.petrinets.control.implementations
+de.pohl.petrinets.control.implementations.actions.menu
+de.pohl.petrinets.control.implementations.actions.toolbar
+de.pohl.petrinets.control.implementations.usecases
+de.pohl.petrinets.model
+de.pohl.petrinets.model.petrinet
+de.pohl.petrinets.model.reachabilitygraph
+de.pohl.petrinets.presenter
+de.pohl.petrinets.view
+de.pohl.petrinets.view.gui
+de.pohl.petrinets.view.gui.components
+de.pohl.petrinets.view.gui.dialog
+de.pohl.petrinets.view.model

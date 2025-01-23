@@ -1,0 +1,75 @@
+/*	Dies ist die css-Datei, in der das Layout des Petrinetzes beschrieben ist. */
+
+/*----- Kantenstyling -----*/
+
+	/*	Style-Angabe für eine Kante */
+	edge {
+		fill-color: black;
+		arrow-shape: arrow;
+		arrow-size: 9px, 6px;
+	}
+	
+	/*	Style-Angabe fuer ein Sprite, dass als Label für eine Kante benutzt wird */
+	sprite.edgeLabel {
+		fill-mode: none;
+		text-size: 14;
+		text-color: black;
+		text-alignment: center;
+		text-offset: 0,-20;
+	}
+
+
+/*----- Knotenstlying -----*/
+
+	/* Style-Angabe für einen Knoten */
+	node {
+		/* Properties */
+		size: 40px;
+		fill-color: LightBlue;
+		
+		/* Textproperties */
+		text-color: black;
+		text-size: 14;
+		text-alignment: under;
+		text-background-mode: plain;
+		
+		/* Border */
+		stroke-mode: plain;
+		stroke-color: black;
+		stroke-width: 1px;
+	}
+	
+		/*	Zusätzliches Atrribut "activated" fuer eine Transition, die unter der aktuellen Markierung aktiviert ist. */
+		node.activated {
+			fill-color: #559E55;
+		}
+		
+		/*	zusaetzliches Atrribut "focus" fuer eine Stelle, die den Editier-Fokus hat. */
+		node.focus {
+			shape: circle;
+			text-style: bold;		
+			stroke-color: NavyBlue;
+			stroke-width: 3px;
+		}
+		
+		/* Zusätzliches Atrribut "transition" fuer einen Knoten, der eine Transition ist. */
+		node.transition {
+			fill-color: #aa0000;
+			shape: box;
+		}
+	
+	/* Style-Angaben für ein Sprite, welches die Anzahl der Tokens einer Stelle angibt. */
+	sprite.nodeTokens{
+		fill-mode: none;
+		size: 40;
+		text-color: black;
+		text-size: 16;
+		text-style: bold;
+		text-offset: 0,-4;
+	}
+
+
+
+
+
+
